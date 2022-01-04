@@ -8,13 +8,15 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>HTML学习笔记(二) | Nancy&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="超链接">
+<meta property="og:type" content="article">
 <meta property="og:title" content="HTML学习笔记(二)">
 <meta property="og:url" content="http://example.com/2022/01/04/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/index.html">
 <meta property="og:site_name" content="Nancy&#39;s Blog">
+<meta property="og:description" content="超链接">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-01-04T12:34:20.000Z">
-<meta property="article:modified_time" content="2022-01-04T12:34:20.753Z">
+<meta property="article:modified_time" content="2022-01-04T13:24:58.252Z">
 <meta property="article:author" content="Nancy">
 <meta name="twitter:card" content="summary">
   
@@ -172,7 +174,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <ul>
+<li>超链接</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>超链接可以让我们从一个页面跳转到其他页面，或者是当前页面的其他位置<br>使用a标签来定义超链接，超链接是行内元素，在a标签中可以嵌套除它自身外任何的元素</p>
+<blockquote>
+<p>属性：href指定跳转的目标路径<br>值：可以是一个外部网站的地址，也可以是一个内部页面的地址(确保两个页面在同一个目录下)</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- alt+shift+向下的箭头：可以不停的向下复制同样的内容 --&gt;</span><br><span class="line">&lt;a href=&quot;https://www.baidu.com/&quot;&gt;百度&lt;/a&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;a&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>相对路径：当我们需要跳转一个服务器内部的页面时，一般我们都会使用相对路径，相对路径会使用.或..开头<br>./ 表示当前文件所在目录<br>../ 表示<br>./可以省略不写，如果不写./也不写../则就相当于默认写./</p>
+</blockquote>
+
       
 
       
@@ -294,7 +309,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">超链接</span></a></li></ol>
                     </div>
                 </span>
             </div>
