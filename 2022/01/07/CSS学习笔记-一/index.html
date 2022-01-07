@@ -6,21 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>HTML学习笔记(二) | Nancy&#39;s Blog</title>
+  <title>CSS学习笔记(一) | Nancy&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="超链接 超链接的一些属性用法">
+  <meta name="description" content="CSS简介 CSS修改元素样式 CSS语法 CSS选择器 常用选择器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML学习笔记(二)">
-<meta property="og:url" content="http://example.com/2022/01/04/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/index.html">
+<meta property="og:title" content="CSS学习笔记(一)">
+<meta property="og:url" content="http://example.com/2022/01/07/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/index.html">
 <meta property="og:site_name" content="Nancy&#39;s Blog">
-<meta property="og:description" content="超链接 超链接的一些属性用法">
+<meta property="og:description" content="CSS简介 CSS修改元素样式 CSS语法 CSS选择器 常用选择器">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://s2.loli.net/2022/01/06/KZDFb8IVmORrEWj.png">
-<meta property="article:published_time" content="2022-01-04T12:34:20.000Z">
-<meta property="article:modified_time" content="2022-01-06T09:30:11.671Z">
+<meta property="article:published_time" content="2022-01-07T09:02:49.000Z">
+<meta property="article:modified_time" content="2022-01-07T16:08:39.340Z">
 <meta property="article:author" content="Nancy">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="语法">
+<meta property="article:tag" content="选择器">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2022/01/06/KZDFb8IVmORrEWj.png">
   
     <link rel="alternative" href="/atom.xml" title="Nancy&#39;s Blog" type="application/atom+xml">
   
@@ -161,14 +162,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-HTML学习笔记-二" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CSS学习笔记-一" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      HTML学习笔记(二)
+      CSS学习笔记(一)
     </h1>
   
 
@@ -184,8 +185,8 @@
         
         <!--显示阅读次数完毕-->
         
-        <a href="/2022/01/04/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/" class="archive-article-date">
-  	<time datetime="2022-01-04T12:34:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-04</time>
+        <a href="/2022/01/07/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/" class="archive-article-date">
+  	<time datetime="2022-01-07T09:02:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-07</time>
 </a>
         
       </header>
@@ -193,38 +194,52 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>超链接</li>
-<li>超链接的一些属性用法</li>
+<li>CSS简介</li>
+<li>CSS修改元素样式</li>
+<li>CSS语法</li>
+<li>CSS选择器<ol>
+<li>常用选择器</li>
+</ol>
+</li>
 </ul>
 <span id="more"></span>
-
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>超链接可以让我们从一个页面跳转到其他页面，或者是当前页面的其他位置<br>使用a标签来定义超链接，超链接是行内元素，在a标签中可以嵌套除它自身外任何的元素</p>
-<h3 id="href属性"><a href="#href属性" class="headerlink" title="href属性"></a>href属性</h3><blockquote>
-<p>属性：href指定跳转的目标路<br>值：可以是一个外部网站的地址，也可以是一个内部页面的地址(确保两个页面在同一个目录下)</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- alt+shift+向下的箭头：可以不停的向下复制同样的内容 --&gt;</span><br><span class="line">&lt;a href=&quot;https://www.baidu.com/&quot;&gt;百度&lt;/a&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;a href=&quot;./当前文件夹下的文件&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<p>相对路径：当我们需要跳转一个服务器内部的页面时，一般我们都会使用相对路径，相对路径会使用.或..开头<br>./ 表示当前文件所在目录<br>../ 表示当前文件所在目录的上一级目录<br>./可以省略不写，如果不写./也不写../则就相当于默认写./<br>如果想要跳转的是当前文件夹下的文件夹中的文件，就直接写：./文件夹/文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;../02-meta标签.html&quot;&gt;爷文件的超链接&lt;/a&gt;</span><br><span class="line">&lt;br&gt;&lt;br&gt;</span><br><span class="line">&lt;a href=&quot;./target1.html&quot;&gt;父文件的超链接&lt;/a&gt;</span><br><span class="line">&lt;br&gt;&lt;br&gt;</span><br><span class="line">&lt;a href=&quot;./inner/target.html&quot;&gt;子文件的超链接&lt;/a&gt;</span><br><span class="line">&lt;br&gt;&lt;br&gt;</span><br><span class="line">&lt;a href=&quot;../outer/target2.html&quot;&gt;爷文件夹下的文件的超链接&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<p>在网页上的呈现效果如图：<img src="https://s2.loli.net/2022/01/06/KZDFb8IVmORrEWj.png" alt="alt 超链接"></p>
-<blockquote>
-<p>所有路径都是相对于当前文件所在目录来说</p>
-</blockquote>
-<hr>
+<h2 id="CSS简介"><a href="#CSS简介" class="headerlink" title="CSS简介"></a>CSS简介</h2><p>回顾网页分为3个部分：<br>结构(HTML) + 表现(CSS) + 行为(JavaScript)<br>CSS：层叠样式表，网页实际上是一个多层的结构，通过CSS可以分别为网页的每一个层来设置样式，而最终我们能看到的只是网页的最上面一层<br>总之，CSS用来设置网页中元素的样式</p>
+<h2 id="CSS修改元素样式"><a href="#CSS修改元素样式" class="headerlink" title="CSS修改元素样式"></a>CSS修改元素样式</h2><blockquote>
 <ul>
-<li>可以将超链接的href属性设置为#，这样点击超链接后页面不会发生跳转，而是转到当前页面的顶部位置<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#&quot;&gt;回到顶部&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<li>第一种方式(内敛样式，行内样式)<br>在标签内部通过style属性来设置样式</li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=&quot;color:red; font-size:30px;&quot;&gt;今天天气真好&lt;/p&gt;</span><br><span class="line">属性的值为CSS，CSS结构为名值对，名color加上：加上值red组成，以分号结尾</span><br></pre></td></tr></table></figure>
+<p>呈现结果为：<span style="color:red; font-size:15px;">今天天气真好</span><br><strong>问题：</strong><br>使用内联样式，样式只能对一个标签生效，如果希望影响到多个元素必须在每一个元素中都复制一遍，并且当样式发生变化时，我们必须要一个一个的修改，非常不方便<br><strong>注意：</strong>开发时绝对不要使用内联样式</p>
 <blockquote>
-<p>在开发中可以将#作为超链接的路径的占位符使用<br>也可以使用 javascript:; 来作为href的属性，此时点击点击这个超链接什么也不会发生</p>
+<ul>
+<li>第二种方式(内部样式表)<br>将样式编写到head中的style标签里，然后通过CSS的选择器来选中元素并为其设置样式，可以同时为多个标签设置样式，并且修改时只需要修改一处即可全部应用，内部样式表更加方便对样式进行复用</li>
+</ul>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;javascript:;&quot;&gt;这是一个超链接&lt;/a&gt;</span><br></pre></td></tr></table></figure></li>
-<li>可以跳转到页面的指定位置，只需将href属性设置为： #目标元素的id属性值<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#bottom&quot;&gt;去标签所在位置&lt;/a&gt;</span><br><span class="line">&lt;a id=&quot;bottom&quot; href=&quot;#&quot;&gt;回到顶部&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="target属性"><a href="#target属性" class="headerlink" title="target属性"></a>target属性</h3><blockquote>
-<p>属性：target用来指定超链接打开的位置<br>可选值：<br>&nbsp;&nbsp;&nbsp;&nbsp;* _self 默认值 在当前页面中打开超链接<br>&nbsp;&nbsp;&nbsp;&nbsp;* _blank 在一个新的页面中打开超链接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            p&#123;</span><br><span class="line">                color:red; </span><br><span class="line">                font-size:15px;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;p&gt;少小离家老大回，乡音无改鬓毛衰&lt;/p&gt;</span><br><span class="line">        &lt;p&gt;落霞与孤鹜齐飞，秋水共长天一色&lt;/p&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>问题：</strong><br>我们的内部样式表只能对一个网页起作用，它里面的样式不能跨页面进行复用</p>
+<blockquote>
+<ul>
+<li>第三种方式(外部样式表)<font color="red">最佳实践</font><br>可以将CSS样式编写到一个外部的CSS文件中，然后通过link标签来引入外部的CSS文件</li>
+</ul>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">默认值：&lt;a href=&quot;./target1.html&quot;&gt;父文件的超链接&lt;/a&gt;</span><br><span class="line">打开新的标签：&lt;a href=&quot;./inner/target.html&quot; target=&quot;_blank&quot;&gt;子文件的超链接&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="id属性"><a href="#id属性" class="headerlink" title="id属性"></a>id属性</h3><blockquote>
-<p>属性：id表示唯一不重复<br>每一个标签都可以添加一个id属性<br>id属性就是元素的唯一标识，同一个页面中不能出现重复的id属性，id均以字母开头</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;./style.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 外部文件style.css如下： --&gt;</span><br><span class="line">p&#123;</span><br><span class="line">    color:blueviolet;</span><br><span class="line">    font-size: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>外部样式表需要通过link标签进行引入，意味着只要想使用这些样式的网页都可以对其进行引用，使样式可以在不同页面直接进行复用，将样式编写到外部CSS文件中，可以使用到浏览器的缓存机制，从而加快网页的加载速度，提高用户的体验</p>
+<h2 id="CSS语法"><a href="#CSS语法" class="headerlink" title="CSS语法"></a>CSS语法</h2><p>style标签中的部分是不属于html里面的，因此在style中写代码时应遵循CSS的语法</p>
+<blockquote>
+<p>基本语法：选择器 声明块</p>
+<ul>
+<li>选择器：通过选择器可以选中页面中的指定元素<br>比如：p的作用就是选中页面中所有的p元素</li>
+<li>声明块：通过声明块来指定要为元素设置的样式<br>声明块由一个一个的声明组成，<br>声明是一个名值对结构：一个样式名对应一个样式值，名和值之间以:连接，以;结尾</li>
+</ul>
 </blockquote>
-</li>
+<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><h3 id="常用选择器"><a href="#常用选择器" class="headerlink" title="常用选择器"></a>常用选择器</h3><ul>
+<li><strong>元素选择器：</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;作用：根据标签名来选中指定元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：标签名{}<br>&nbsp;&nbsp;&nbsp;&nbsp;例子：p{} h1{} div{}</li>
+<li><strong>id选择器：</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;作用：根据元素的id属性值选中一个元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：#id属性值{}<br>&nbsp;&nbsp;&nbsp;&nbsp;例子：#red{} #box{}</li>
+<li><strong>类选择器(class)：主要</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;作用：根据元素的class属性值选中一组元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：.class属性值<br>&nbsp;&nbsp;&nbsp;&nbsp;例子：.blue{}<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p class=&quot;blue&quot;&gt;今天天气真好！&lt;/p&gt;</span><br><span class="line">&lt;p class=&quot;blue&quot;&gt;可以出去玩了！&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+class是一个标签的属性，它和id类似，不同的是class可以重复使用，可以通过class属性为元素分组，可以同时为一个元素指定多个class属性<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p class=&quot;blue abc&quot;&gt;可以出去玩了！&lt;/p&gt;</span><br></pre></td></tr></table></figure></li>
+<li><strong>通配选择器</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;作用：选中页面中的所有元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：*{}</li>
 </ul>
 
       
@@ -255,6 +270,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">语法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">选择器</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -305,7 +339,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/01/04/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/01/07/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -319,18 +353,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/01/06/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%89/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          HTML学习笔记(三)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/01/04/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HTML学习笔记(一)</div>
+    <a href="/2022/01/06/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTML学习笔记(三)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -357,7 +382,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#href%E5%B1%9E%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text">href属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#target%E5%B1%9E%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">target属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#id%E5%B1%9E%E6%80%A7"><span class="toc-number">1.3.</span> <span class="toc-text">id属性</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">CSS简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E4%BF%AE%E6%94%B9%E5%85%83%E7%B4%A0%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">CSS修改元素样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E8%AF%AD%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">CSS语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">CSS选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.1.</span> <span class="toc-text">常用选择器</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
