@@ -8,20 +8,24 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>CSS学习笔记(一) | Nancy&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSS简介 CSS修改元素样式 CSS语法 CSS选择器 常用选择器">
+  <meta name="description" content="CSS简介 CSS修改元素样式 CSS语法 CSS选择器 常用选择器 符合选择器 关系选择器 属性选择器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS学习笔记(一)">
 <meta property="og:url" content="http://example.com/2022/01/07/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/index.html">
 <meta property="og:site_name" content="Nancy&#39;s Blog">
-<meta property="og:description" content="CSS简介 CSS修改元素样式 CSS语法 CSS选择器 常用选择器">
+<meta property="og:description" content="CSS简介 CSS修改元素样式 CSS语法 CSS选择器 常用选择器 符合选择器 关系选择器 属性选择器">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s2.loli.net/2022/01/08/5esFBOkKVRt26Zi.png">
+<meta property="og:image" content="https://s2.loli.net/2022/01/08/bmRG5NhE2KZg4jf.png">
+<meta property="og:image" content="https://s2.loli.net/2022/01/08/PorTLkJwNH4pmh2.png">
 <meta property="article:published_time" content="2022-01-07T09:02:49.000Z">
-<meta property="article:modified_time" content="2022-01-08T02:42:18.472Z">
+<meta property="article:modified_time" content="2022-01-08T14:01:59.657Z">
 <meta property="article:author" content="Nancy">
 <meta property="article:tag" content="CSS">
 <meta property="article:tag" content="语法">
 <meta property="article:tag" content="选择器">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/01/08/5esFBOkKVRt26Zi.png">
   
     <link rel="alternative" href="/atom.xml" title="Nancy&#39;s Blog" type="application/atom+xml">
   
@@ -199,6 +203,9 @@
 <li>CSS语法</li>
 <li>CSS选择器<ol>
 <li>常用选择器</li>
+<li>符合选择器</li>
+<li>关系选择器</li>
+<li>属性选择器</li>
 </ol>
 </li>
 </ul>
@@ -239,7 +246,27 @@
 <li><strong>id选择器：</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;作用：根据元素的id属性值选中一个元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：#id属性值{}<br>&nbsp;&nbsp;&nbsp;&nbsp;例子：#red{} #box{}</li>
 <li><strong>类选择器(class)：主要</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;作用：根据元素的class属性值选中一组元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：.class属性值<br>&nbsp;&nbsp;&nbsp;&nbsp;例子：.blue{}<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p class=&quot;blue&quot;&gt;今天天气真好！&lt;/p&gt;</span><br><span class="line">&lt;p class=&quot;blue&quot;&gt;可以出去玩了！&lt;/p&gt;</span><br></pre></td></tr></table></figure>
 class是一个标签的属性，它和id类似，不同的是class可以重复使用，可以通过class属性为元素分组，可以同时为一个元素指定多个class属性<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p class=&quot;blue abc&quot;&gt;可以出去玩了！&lt;/p&gt;</span><br></pre></td></tr></table></figure></li>
-<li><strong>通配选择器</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;作用：选中页面中的所有元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：*{}   </li>
+<li><strong>通配选择器</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;作用：选中页面中的所有元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：*{}<h3 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h3></li>
+<li>交集选择器<br>&nbsp;&nbsp;&nbsp;&nbsp;作用：选中同时符合多个条件的元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：选择器1选择器2选择器3选择器n{}<br>&nbsp;&nbsp;&nbsp;&nbsp;<strong>注意：</strong>交集选择器中如果有元素选择器，必须使用元素选择器开头，一般不太建议div#box{}，因为id已经可以唯一确认一个标签，这样写多此一举<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;red a b c&quot;&gt;今天天气真好！&lt;/div&gt;</span><br><span class="line">&lt;p class=&quot;red&quot;&gt;可以出去玩了&lt;/p&gt;</span><br><span class="line">&lt;p class=&quot;red1 a b c&quot;&gt;真开心&lt;/p&gt;</span><br><span class="line">CSS：</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    div.red&#123;</span><br><span class="line">        color:red;</span><br><span class="line">        font_size:30px;</span><br><span class="line">    &#125;</span><br><span class="line">    .a.b.c&#123;</span><br><span class="line">        color:blue;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+呈现在网页中的结果为：<image src="https://s2.loli.net/2022/01/08/grOjoKXIQE3kCdT.png" width="165"><image></li>
+<li>选择器分组(并集选择器)<br>&nbsp;&nbsp;&nbsp;&nbsp;作用：同时选择多个选择器对应的元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：选择器1，选择器2，选择器3，选择器{}<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">h1,span&#123;</span><br><span class="line">    color:green;</span><br><span class="line">&#125;</span><br><span class="line">#b1,.p1,h1,span,div.red&#123;</span><br><span class="line">    color:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="关系选择器"><a href="#关系选择器" class="headerlink" title="关系选择器"></a>关系选择器</h2>父元素：直接包含子元素的元素叫做父元素<br>子元素：直接被父元素包含的元素是子元素<br>祖先元素：直接或间接包含后代元素的元素叫做祖先元素，一个元素的父元素也是它的祖先元素<br>后代元素：直接或间接被祖先元素包含的元素叫做后代元素，子元素也是后代元素<br>兄弟元素：拥有相同父元素的元素是兄弟元素</li>
+<li>子元素选择器<br>&nbsp;&nbsp;&nbsp;&nbsp;作用：选中指定父元素的指定子元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：父元素 &gt; 子元素</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    div.box &gt; span&#123;</span><br><span class="line">        color:brown;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;div color=&quot;box&quot;&gt;</span><br><span class="line">    我是第一个div</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">        我是div中的p元素</span><br><span class="line">        &lt;span&gt;我是p中的span元素&lt;/span&gt;</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">    &lt;span&gt;我是div中的span元素&lt;/span&gt;</span><br><span class="line">    &lt;span&gt;我是div中的span元素&lt;/span&gt;</span><br><span class="line">    &lt;span&gt;我是div中的span元素&lt;/span&gt;</span><br><span class="line">    &lt;span&gt;我是div中的span元素&lt;/span&gt;</span><br><span class="line">    &lt;span&gt;我是div中的span元素&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;span&gt;我是第二个div内的span&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>在网页中的呈现结果为：<img src="https://s2.loli.net/2022/01/08/5esFBOkKVRt26Zi.png" width="280"></p>
+<ul>
+<li>后代元素选择器<br>&nbsp;&nbsp;&nbsp;&nbsp;作用：选中指定元素内的指定后代元素<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：祖先 后代<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div span&#123;</span><br><span class="line">    color:skyblue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+在网页中的呈现结果为：<img src="https://s2.loli.net/2022/01/08/bmRG5NhE2KZg4jf.png" width="280"></li>
+<li>兄弟元素选择器<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;作用：选择下一个兄弟，如果后面还连着几个元素，不管，只选择紧挨的下一个，如果下一个不是指定的，则无效<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：前一个 + 后一个</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p + span&#123;</span><br><span class="line">    color:crimson;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+在网页中的呈现结果为：<img src="https://s2.loli.net/2022/01/08/PorTLkJwNH4pmh2.png" width="280"><blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;作用：选择下边所有的兄弟<br>&nbsp;&nbsp;&nbsp;&nbsp;语法：兄 ~ 弟</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p ~ span&#123;</span><br><span class="line">     color:darksalmon;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+在网页中的呈现结果为：&lt;img src=”<a target="_blank" rel="noopener" href="https://s2.loli.net/2022/01/08/N359oRqObuAhUMv.png&quot;">https://s2.loli.net/2022/01/08/N359oRqObuAhUMv.png&quot;</a> width=”600&gt;<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2></li>
 </ul>
 
       
@@ -382,7 +409,7 @@ class是一个标签的属性，它和id类似，不同的是class可以重复�
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">CSS简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E4%BF%AE%E6%94%B9%E5%85%83%E7%B4%A0%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">CSS修改元素样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E8%AF%AD%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">CSS语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">CSS选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.1.</span> <span class="toc-text">常用选择器</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">CSS简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E4%BF%AE%E6%94%B9%E5%85%83%E7%B4%A0%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">CSS修改元素样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E8%AF%AD%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">CSS语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">CSS选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.1.</span> <span class="toc-text">常用选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.2.</span> <span class="toc-text">复合选择器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text">关系选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text">属性选择器</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -646,5 +673,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":200},"mobile":{"show":true},"log":false});</script></body>
 </html>
