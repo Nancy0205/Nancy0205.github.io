@@ -6,30 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>CSS学习笔记-(二) | Nancy&#39;s Blog</title>
+  <title>CSS学习笔记-(三) | Nancy&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="超链接伪类 伪元素选择器 样式继承 选择器的权重">
+  <meta name="description" content="长度单位 颜色单位">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS学习笔记-(二)">
-<meta property="og:url" content="http://example.com/2022/01/09/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/index.html">
+<meta property="og:title" content="CSS学习笔记-(三)">
+<meta property="og:url" content="http://example.com/2022/01/12/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%89/index.html">
 <meta property="og:site_name" content="Nancy&#39;s Blog">
-<meta property="og:description" content="超链接伪类 伪元素选择器 样式继承 选择器的权重">
+<meta property="og:description" content="长度单位 颜色单位">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://s2.loli.net/2022/01/10/dAyhHk1ocpDOglj.png">
-<meta property="og:image" content="https://s2.loli.net/2022/01/10/SHJe9DsPQnuwjrI.png">
-<meta property="og:image" content="https://s2.loli.net/2022/01/10/OTXNHepzMs68Frw.png">
-<meta property="og:image" content="https://s2.loli.net/2022/01/10/n5Dba2HYMxde4jr.png">
-<meta property="og:image" content="https://s2.loli.net/2022/01/10/TRu1pbzoIdWrN7Z.png">
-<meta property="og:image" content="https://s2.loli.net/2022/01/12/jY3lQrdmGsoXN1w.png">
-<meta property="article:published_time" content="2022-01-09T14:44:50.000Z">
-<meta property="article:modified_time" content="2022-01-12T02:46:08.791Z">
+<meta property="og:image" content="https://s2.loli.net/2022/01/12/mAXlYz231jR9DWC.png">
+<meta property="og:image" content="https://s2.loli.net/2022/01/12/uGjmrYB7gC5Pw4E.png">
+<meta property="article:published_time" content="2022-01-12T02:54:16.000Z">
+<meta property="article:modified_time" content="2022-01-12T14:14:29.523Z">
 <meta property="article:author" content="Nancy">
-<meta property="article:tag" content="伪元素">
-<meta property="article:tag" content="超链接伪类">
-<meta property="article:tag" content="继承">
-<meta property="article:tag" content="权重">
+<meta property="article:tag" content="像素&amp;百分比">
+<meta property="article:tag" content="rgb&amp;hsl">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2022/01/10/dAyhHk1ocpDOglj.png">
+<meta name="twitter:image" content="https://s2.loli.net/2022/01/12/mAXlYz231jR9DWC.png">
   
     <link rel="alternative" href="/atom.xml" title="Nancy&#39;s Blog" type="application/atom+xml">
   
@@ -170,14 +164,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CSS学习笔记-二" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CSS学习笔记-三" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CSS学习笔记-(二)
+      CSS学习笔记-(三)
     </h1>
   
 
@@ -193,8 +187,8 @@
         
         <!--显示阅读次数完毕-->
         
-        <a href="/2022/01/09/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/" class="archive-article-date">
-  	<time datetime="2022-01-09T14:44:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-09</time>
+        <a href="/2022/01/12/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%89/" class="archive-article-date">
+  	<time datetime="2022-01-12T02:54:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-12</time>
 </a>
         
       </header>
@@ -202,45 +196,46 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><a href="#1"><font color="black">超链接伪类</font></a></li>
-<li><a href="#2"><font color="black">伪元素选择器</font></a></li>
-<li><a href="#3"><font color="black">样式继承</font></a></li>
-<li><a href="#4"><font color="black">选择器的权重</font></a></li>
+<li><a href="#1"><font color="black">长度单位</a></li>
+<li><a href="#2"><font color="black">颜色单位</a></li>
 </ul>
 <span id="more"></span>
-<h2 id="超链接伪类"><a href="#超链接伪类" class="headerlink" title="超链接伪类"></a><p id="1">超链接伪类</p></h2><ul>
-<li>:link 用来表示(默认)没访问过的链接(正常的链接)</li>
-<li>:visited 用来表示访问过的链接<br>由于隐私的原因，所以visited这个伪类只能修改链接的颜色(一般不轻易的改)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    a:link&#123;</span><br><span class="line">        color:cornflowerblue;</span><br><span class="line">        font-size:20px;</span><br><span class="line">         /* 设置大小后，两个都会变大 */</span><br><span class="line">    &#125;</span><br><span class="line">    a:visited&#123;</span><br><span class="line">         color:crimson;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-在网页中的呈现结果为：<img src="https://s2.loli.net/2022/01/10/dAyhHk1ocpDOglj.png" width="150"><br>设置link的CSS，由于不管是访问过还是没访问过的链接都是正常的链接，因此设置字体大小时，两个都会变化</li>
-<li>:hover 用来表示鼠标移入的状态</li>
-<li>:active 用来表示鼠标点击<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">a:hover&#123;</span><br><span class="line">    color:rgb(102, 139, 0);</span><br><span class="line">        font-size:20px;</span><br><span class="line">    &#125;</span><br><span class="line">    a:active&#123;</span><br><span class="line">        color:darkslategray;</span><br><span class="line">        font-size:20px;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-在网页中的呈现结果为：<img src="https://s2.loli.net/2022/01/10/SHJe9DsPQnuwjrI.png" width="130"><br>hover就是当鼠标移到对应的链接处时会变化，active是当鼠标点击超链接还没松手时会变化<h2 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a><p id="2">伪元素选择器</p></h2>伪元素：表示页面中一些特殊的并不真实存在的元素(特殊的元素)<br>伪元素使用::开头</li>
-<li>::first-letter 表示第一个字母</li>
-<li>::first-line 表示第一行<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    p::first-letter&#123;</span><br><span class="line">        font-size:30px;</span><br><span class="line">    &#125;</span><br><span class="line">    p::first-line&#123;</span><br><span class="line">        background-color:rgb(119, 217, 247);</span><br><span class="line">        &lt;!-- background-color表示背景颜色 --&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sit, eius ipsa est impedit eligendi. Doloremque, optio mollitia in voluptates repellendus provident aperiam tempore nostrum natus, esse adipisci. Molestias, voluptatum.</span><br><span class="line">    &lt;/p&gt;</span><br></pre></td></tr></table></figure>
-在网页中的呈现结果为：<img src="https://s2.loli.net/2022/01/10/OTXNHepzMs68Frw.png" width="590"></li>
-<li>::selection 表示选中的内容<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p::selection&#123;</span><br><span class="line">    background-color:rgb(207, 149, 190);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-在网页中的呈现结果为：<img src="https://s2.loli.net/2022/01/10/n5Dba2HYMxde4jr.png" width="635"></li>
-<li>::before 元素的开始</li>
-<li>::after 元素的最后<blockquote>
-<p>before和after必须结合content属性来使用,content表示内容，凭空加上的内容，鼠标无法选中该内容，比如q标签中，自动给句子前后加上双引号，这个引号是没办法选中的</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div::before&#123;</span><br><span class="line">    content:&quot;abc&quot;;</span><br><span class="line">    color:deeppink;</span><br><span class="line">&#125;</span><br><span class="line">div::after&#123;</span><br><span class="line">    content:&quot;haha&quot;;</span><br><span class="line">    color:gold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-在网页中的呈现结果为：<img src="https://s2.loli.net/2022/01/10/TRu1pbzoIdWrN7Z.png" width="220"><br>为了加深学习可以进行餐厅联系练习：<br><a target="_blank" rel="noopener" href="https://flukeout.github.io/">餐厅练习</a><blockquote>
-<p>练习规则：<br>根据抖动的物品，在编辑框中输入对应正确的选择器写法</p>
-</blockquote>
-<h2 id="样式继承"><a href="#样式继承" class="headerlink" title="样式继承"></a><p id="3">样式继承</p></h2>样式的继承就是我们为一个元素设置的样式同时也会应用到它的后代元素上，继承是发生在祖先和后代之间的，继承的设计是为了方便我们的开发：利用继承我们可以将一些通用的样式统一设置到共同的祖先元素上，这样只需要设置一次即可让所有的元素都具有该样式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    font-size:12px;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-<strong>注意：</strong><br>并不是所有的样式都会被继承，比如：背景相关的，布局相关的这些样式都不会被继承<h2 id="选择器的权重"><a href="#选择器的权重" class="headerlink" title="选择器的权重"></a><p id="4">选择器的权重</p></h2>样式的冲突：<br>当我们通过不同的选择器，选中相同的元素，并且为相同的样式设置不同的值时，此时就发生了样式的冲突。发生样式冲突时，应用哪个样式由选择器的权重(优先级)决定。<blockquote>
-<p>选择器的权重：<br>内联样式&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,0,0,0<br>id选择器&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0,1,0,0<br>类和伪类选择器&nbsp;0,0,1,0<br>元素选择器&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0,0,0,1<br>继承的样式&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;没有优先级</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;box1&quot; class=&quot;red&quot; style=&quot;background-color:skyblue;&quot;&gt;我是一个div&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>比较优先级时：需要将所有的选择器的优先级进行相加计算，最后优先级越高，则越优先显示，比如：#box{}的优先级div#box{}低，因为#box优先级为100，div#box的优先级为101。分组选择器是单独计算的。选择器的累加不会超过其最大的数量级，类选择器再高也不会超过id选择器。如果优先级计算后相等，此时则优先使用靠下的样式</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    color:red;</span><br><span class="line">&#125;</span><br><span class="line">div&#123;</span><br><span class="line">    color:yellow;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;box&quot;&gt;我是div&lt;span&gt;我是div中的span&lt;/span&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-最后在网页中的呈现结果为：<img src="https://s2.loli.net/2022/01/12/jY3lQrdmGsoXN1w.png" width="185"><br>因为span的样式属于继承div的样式，而继承的样式的优先级没有通配优先级高，因此span的样式还是由通配符来决定<blockquote>
-<p>可以在某一个样式的后边添加!important，则此时该样式会获取到最高的优先级，甚至超过内联样式，注意，在开发中这个一定要慎用！</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    color:red!important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<h2 id="长度单位"><a href="#长度单位" class="headerlink" title="长度单位"></a><p id="1">长度单位</p></h2><ul>
+<li><p style="background-color:rgb(176, 224, 219);"><strong>像素</strong></p>
+屏幕(显示器)实际上是由一个一个的小点点构成的，不同屏幕的像素大小是不同的，像素越小的屏幕显示的效果越清晰，所以同样的200px在不同的设备下显示效果不一样
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;box1&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;box2&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">.box1&#123;</span><br><span class="line">    width:200px;</span><br><span class="line">    height:200px;</span><br><span class="line">    background-color:orange;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p style="background-color:rgb(176, 224, 219);"><strong>百分比</strong></p>
+百分比可以将属性值设置为相对于其父元素属性的百分比，设置百分比可以便于子元素跟随父元素的改变而改变
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.box2&#123;</span><br><span class="line">    width:50%;</span><br><span class="line">    height:50%;</span><br><span class="line">    background-color:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+以上代码在网页中的呈现结果为：<img src="https://s2.loli.net/2022/01/12/mAXlYz231jR9DWC.png" width="90"></li>
+<li><p style="background-color:rgb(176, 224, 219);"><strong>em</strong></p>
+em是相对于元素的字体大小来计算的
+1em = 1font-size
+em会根据字体大小的改变来改变
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.box3&#123;</span><br><span class="line">    font-size:20px;</span><br><span class="line">    &lt;!-- 相当于width=200px，height=200px --&gt;</span><br><span class="line">    width:10em;</span><br><span class="line">    height:10em;</span><br><span class="line">    background-color:blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+以上代码在网页中的呈现结果为：<img src="https://s2.loli.net/2022/01/12/uGjmrYB7gC5Pw4E.png" width="90"></li>
+<li><p style="background-color:rgb(176, 224, 219);"><strong>rem</strong></p>
+rem是相对于根元素html的字体大小来计算，只有当html的字体大小改变时才会影响rem的大小</li>
+</ul>
+<h2 id="颜色单位"><a href="#颜色单位" class="headerlink" title="颜色单位"></a><p id="1">颜色单位</p></h2><p>在CSS中可以直接使用颜色的名字来设置各种颜色<br>比如：red，orange，yellow，blue，green……<br>但是在CSS中直接使用颜色名是非常不方便的。</p>
+<ul>
+<li><p style="background-color:rgb(227, 228, 185);"><strong>RGB值</strong></p>
+通过三种颜色的不同浓度来调配出不同的颜色
+R:red G:green B:blue
+每一种颜色的范围在0~255(0%~100%)之间
+语法：RGB(红色，绿色，蓝色)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">background-color:rgb(0,0,0);黑色</span><br><span class="line">background-color:rgb(255,255,255);白色色</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p style="background-color:rgb(227, 228, 185);"><strong>RGBA值</strong></p>
+在RGB的基础上增加了A表示不透明，需要四个值，前三个和RGB一样，第四个表示不透明度。
+1表示完全不透明 0表示完全透明 .5表示半透明</li>
+<li><p style="background-color:rgb(227, 228, 185);"><strong>十六进制的RGB值</strong></p>
+语法：#红色绿色蓝色
+颜色浓度通过00-ff，如果颜色两位两位重复可以进行简写，比如：#aabbcc --> #abc，如果是#aabbcd则不能简写
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background-color:#ff0000;红色</span><br><span class="line">--&gt; #f00</span><br></pre></td></tr></table></figure></li>
+<li><p style="background-color:rgb(227, 228, 185);"><strong>HSL值和HSLA值</strong></p>
+H 色相(0 ~ 360)
+S 饱和度，颜色浓度(0% ~ 100%)
+L 亮度，颜色的亮度(0% ~ 100%)</li>
 </ul>
 
       
@@ -276,19 +271,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">伪元素</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">像素&百分比</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">超链接伪类</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">继承</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">权重</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">rgb&hsl</a>
         		</li>
       		
 		</ul>
@@ -344,7 +331,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/01/09/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/01/12/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -358,18 +345,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/01/12/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%89/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/01/12/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9B%9B/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CSS学习笔记-(三)
+          CSS学习笔记-(四)
         
       </div>
     </a>
   
   
-    <a href="/2022/01/07/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS学习笔记(一)</div>
+    <a href="/2022/01/09/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS学习笔记-(二)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -396,7 +383,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E4%BC%AA%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">超链接伪类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">伪元素选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E7%BB%A7%E6%89%BF"><span class="toc-number">3.</span> <span class="toc-text">样式继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E6%9D%83%E9%87%8D"><span class="toc-number">4.</span> <span class="toc-text">选择器的权重</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%95%BF%E5%BA%A6%E5%8D%95%E4%BD%8D"><span class="toc-number">1.</span> <span class="toc-text">长度单位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2%E5%8D%95%E4%BD%8D"><span class="toc-number">2.</span> <span class="toc-text">颜色单位</span></a></li></ol>
                     </div>
                 </span>
             </div>
