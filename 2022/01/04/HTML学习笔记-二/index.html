@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s2.loli.net/2022/01/06/KZDFb8IVmORrEWj.png">
 <meta property="article:published_time" content="2022-01-04T12:34:20.000Z">
-<meta property="article:modified_time" content="2022-01-09T13:28:18.077Z">
+<meta property="article:modified_time" content="2022-01-17T14:09:29.306Z">
 <meta property="article:author" content="Nancy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2022/01/06/KZDFb8IVmORrEWj.png">
@@ -202,25 +202,25 @@
 <h3 id="href属性"><a href="#href属性" class="headerlink" title="href属性"></a><p id="其他">href属性</p></h3><blockquote>
 <p>属性：href指定跳转的目标路<br>值：可以是一个外部网站的地址，也可以是一个内部页面的地址(确保两个页面在同一个目录下)</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- alt+shift+向下的箭头：可以不停的向下复制同样的内容 --&gt;</span><br><span class="line">&lt;a href=&quot;https://www.baidu.com/&quot;&gt;百度&lt;/a&gt;</span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;a href=&quot;./当前文件夹下的文件&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- alt+shift+向下的箭头：可以不停的向下复制同样的内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.baidu.com/&quot;</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;./当前文件夹下的文件&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>相对路径：当我们需要跳转一个服务器内部的页面时，一般我们都会使用相对路径，相对路径会使用.或..开头<br>./ 表示当前文件所在目录<br>../ 表示当前文件所在目录的上一级目录<br>./可以省略不写，如果不写./也不写../则就相当于默认写./<br>如果想要跳转的是当前文件夹下的文件夹中的文件，就直接写：./文件夹/文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;../02-meta标签.html&quot;&gt;爷文件的超链接&lt;/a&gt;</span><br><span class="line">&lt;br&gt;&lt;br&gt;</span><br><span class="line">&lt;a href=&quot;./target1.html&quot;&gt;父文件的超链接&lt;/a&gt;</span><br><span class="line">&lt;br&gt;&lt;br&gt;</span><br><span class="line">&lt;a href=&quot;./inner/target.html&quot;&gt;子文件的超链接&lt;/a&gt;</span><br><span class="line">&lt;br&gt;&lt;br&gt;</span><br><span class="line">&lt;a href=&quot;../outer/target2.html&quot;&gt;爷文件夹下的文件的超链接&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;../02-meta标签.html&quot;</span>&gt;</span>爷文件的超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;./target1.html&quot;</span>&gt;</span>父文件的超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;./inner/target.html&quot;</span>&gt;</span>子文件的超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;../outer/target2.html&quot;</span>&gt;</span>爷文件夹下的文件的超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>在网页上的呈现效果如图：<img src="https://s2.loli.net/2022/01/06/KZDFb8IVmORrEWj.png" alt="alt 超链接"></p>
 <blockquote>
 <p>所有路径都是相对于当前文件所在目录来说</p>
 </blockquote>
 <hr>
 <ul>
-<li>可以将超链接的href属性设置为#，这样点击超链接后页面不会发生跳转，而是转到当前页面的顶部位置<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#&quot;&gt;回到顶部&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<li>可以将超链接的href属性设置为#，这样点击超链接后页面不会发生跳转，而是转到当前页面的顶部位置<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>回到顶部<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>在开发中可以将#作为超链接的路径的占位符使用<br>也可以使用 javascript:; 来作为href的属性，此时点击点击这个超链接什么也不会发生</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;javascript:;&quot;&gt;这是一个超链接&lt;/a&gt;</span><br></pre></td></tr></table></figure></li>
-<li>可以跳转到页面的指定位置，只需将href属性设置为： #目标元素的id属性值<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#bottom&quot;&gt;去标签所在位置&lt;/a&gt;</span><br><span class="line">&lt;a id=&quot;bottom&quot; href=&quot;#&quot;&gt;回到顶部&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;javascript:;&quot;</span>&gt;</span>这是一个超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>可以跳转到页面的指定位置，只需将href属性设置为： #目标元素的id属性值<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#bottom&quot;</span>&gt;</span>去标签所在位置<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">&quot;bottom&quot;</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>回到顶部<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="target属性"><a href="#target属性" class="headerlink" title="target属性"></a>target属性</h3><blockquote>
 <p>属性：target用来指定超链接打开的位置<br>可选值：<br>&nbsp;&nbsp;&nbsp;&nbsp;* _self 默认值 在当前页面中打开超链接<br>&nbsp;&nbsp;&nbsp;&nbsp;* _blank 在一个新的页面中打开超链接</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">默认值：&lt;a href=&quot;./target1.html&quot;&gt;父文件的超链接&lt;/a&gt;</span><br><span class="line">打开新的标签：&lt;a href=&quot;./inner/target.html&quot; target=&quot;_blank&quot;&gt;子文件的超链接&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">默认值：<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;./target1.html&quot;</span>&gt;</span>父文件的超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">打开新的标签：<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;./inner/target.html&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>子文件的超链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="id属性"><a href="#id属性" class="headerlink" title="id属性"></a>id属性</h3><blockquote>
 <p>属性：id表示唯一不重复<br>每一个标签都可以添加一个id属性<br>id属性就是元素的唯一标识，同一个页面中不能出现重复的id属性，id均以字母开头</p>
 </blockquote>
@@ -509,6 +509,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">rgb&hsl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">块元素</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">行内元素</a>
               </li>
             
             <div class="clearfix"></div>
